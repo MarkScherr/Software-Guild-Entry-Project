@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/JavaScript" src="LuckySevens.js"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style> 
+			form, h1 {
+				display: block;
+				margin: 8px auto;
+				text-align: center;
+			
+			}
+			.table {
+				    border-radius: 5px;
+					width: 50%;
+					margin: 16px auto;
+					float: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Lucky Sevens</h1>
+			<form name="gamble" onsubmit="return validateItems();" 
+				  onreset="resetForm();" class="form-inline">
+					<div class="form-group">
+						<label for="bet">Bet</label>
+						<input type="number" class="form-control" id="bet">
+					</div>
+				  
+					<button type="submit" id="submitButton" class="btn btn-default">Play</button>
+					<noscript>
+						For full functionality of this site it is necessary to enable JavaScript.
+						Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+						instructions how to enable JavaScript in your web browser</a>.
+					</noscript>
+					<button type="reset" id="resetButton" class="btn">Reset</button>
+			</form>
+			<hr />
+		</div>
+			<table id="results" class="table table-striped" align="center">
+				<thead>
+					<tr>
+						<th>Operation</th>
+						<th>Result</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Total Rolls Before Going Broke</td>
+						<td><span id="totalRolls"></span></td>
+					</tr>
+					<tr>
+						<td>Maximum Cash</td>
+						<td><span id="max"></span></td>
+					</tr>
+					<tr>
+						<td>Total Max Bet Rolls</td>
+						<td><span id="totalMaxRolls"></span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
